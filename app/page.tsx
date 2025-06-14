@@ -9,54 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { ChevronUp, ChevronDown, Trash2 } from "lucide-react";
-
-/**
- * Built‑in string operations. Add more by pushing to this array.
- */
-const BUILT_IN_OPS = [
-  {
-    id: "unescape_string",
-    name: "Un‑escape string",
-    fn: (input: string) => {
-      try {
-        let temp = input.trim();
-        if (
-          (temp.startsWith("\"") && temp.endsWith("\"")) ||
-          (temp.startsWith("'") && temp.endsWith("'"))
-        ) {
-          temp = temp.slice(1, -1);
-        }
-        return temp.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
-      } catch {
-        return input;
-      }
-    },
-  },
-  {
-    id: "beautify_json",
-    name: "Beautify / Pretty‑print JSON",
-    fn: (input: string) => {
-      try {
-        return JSON.stringify(JSON.parse(input), null, 2);
-      } catch {
-        return input;
-      }
-    },
-  },
-  {
-    id: "decode_url",
-    name: "URL‑decode entire string",
-    fn: (input: string) => {
-      try {
-        return decodeURIComponent(input);
-      } catch {
-        return input;
-      }
-    },
-  },
-] as const;
-
-type OpId = typeof BUILT_IN_OPS[number]["id"];
+import { BUILT_IN_OPS, OpId } from "./stringOps";
 
 export default function Home() {
   const [input, setInput] = useState<string>("");
