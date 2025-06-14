@@ -50,6 +50,12 @@ export const BUILT_IN_OPS: readonly StringOp[] = [
       }
     },
   },
+  // Compress string (remove all whitespace and newlines)
+  {
+    id: "compress_string",
+    name: "Compress string (remove all whitespace and newlines)",
+    fn: (input: string) => input.replace(/\s+/g, ''),
+  },
   // URL-decode
   {
     id: "decode_url",
@@ -201,12 +207,6 @@ export const BUILT_IN_OPS: readonly StringOp[] = [
     id: "line_count",
     name: "Count lines",
     fn: (input: string) => `${input.split(/\r?\n/).length} lines`,
-  },
-  // Compress string (remove all whitespace and newlines)
-  {
-    id: "compress_string",
-    name: "Compress string (remove all whitespace and newlines)",
-    fn: (input: string) => input.replace(/\s+/g, ''),
   },
 ];
 
