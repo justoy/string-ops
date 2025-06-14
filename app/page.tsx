@@ -44,13 +44,11 @@ const BUILT_IN_OPS = [
     },
   },
   {
-    id: "decode_url_field",
-    name: "URL‑decode `url` field (if any)",
+    id: "decode_url",
+    name: "URL‑decode entire string",
     fn: (input: string) => {
       try {
-        const obj = JSON.parse(input);
-        if (obj.url) obj.url = decodeURIComponent(obj.url);
-        return JSON.stringify(obj, null, 2);
+        return decodeURIComponent(input);
       } catch {
         return input;
       }
