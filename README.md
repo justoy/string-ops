@@ -15,6 +15,8 @@ A lightweight **Next.js 14** web app that lets you stack and execute string‑p
 | 🎨 **Tailwind + shadcn/ui**          | Production‑ready components with consistent theming.                            |
 
 ### Example
+Live demo: [https://string-ops.vercel.app](https://string-ops.vercel.app)
+
 ![Example of String Ops App](example.png)
 
 ---
@@ -51,7 +53,7 @@ Pipeline: *Un‑escape → Beautify → URL‑decode* → **Output** becomes nic
 
 ## 🏗️ Deploying
 
-The app is 100 % client‑side, so Vercel (recommended), Netlify, or any static‑hosting service works:
+The app is 100 % client‑side, so Vercel (recommended), Netlify, or any static‑hosting service works:
 
 1. Push to GitHub/GitLab.
 2. Click **"Import Project"** on Vercel.
@@ -63,4 +65,4 @@ Done—build & deploy in under a minute.
 
 ## 📄 License
 
-MIT © 2025 Your Name
+MIT © 2025 Your Name

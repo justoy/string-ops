@@ -202,6 +202,12 @@ export const BUILT_IN_OPS: readonly StringOp[] = [
     name: "Count lines",
     fn: (input: string) => `${input.split(/\r?\n/).length} lines`,
   },
+  // Compress string (remove all whitespace and newlines)
+  {
+    id: "compress_string",
+    name: "Compress string (remove all whitespace and newlines)",
+    fn: (input: string) => input.replace(/\s+/g, ''),
+  },
 ];
 
 export type OpId = typeof BUILT_IN_OPS[number]["id"]; 
