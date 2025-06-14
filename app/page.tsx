@@ -15,8 +15,8 @@ import { ChevronUp, ChevronDown, Trash2 } from "lucide-react";
  */
 const BUILT_IN_OPS = [
   {
-    id: "unescape_json",
-    name: "Un‑escape JSON string",
+    id: "unescape_string",
+    name: "Un‑escape string",
     fn: (input: string) => {
       try {
         let temp = input.trim();
