@@ -26,6 +26,18 @@ export const BUILT_IN_OPS: readonly StringOp[] = [
       }
     },
   },
+  // Escape string
+  {
+    id: "escape_string",
+    name: "Escape string",
+    fn: (input: string) => {
+      try {
+        return input.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+      } catch {
+        return input;
+      }
+    },
+  },
   // Beautify JSON
   {
     id: "beautify_json",
