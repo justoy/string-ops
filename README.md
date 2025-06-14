@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧰 String Ops App
 
-## Getting Started
+A lightweight **Next.js 14** web app that lets you stack and execute string‑processing operations, e.g., un‑escapinging JSON blobs, pretty‑printing, URL‑decoding.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+| Capability                           | Details                                                                         |
+| ------------------------------------ | ------------------------------------------------------------------------------- |
+| 🔧 **Composable pipeline**           | Pick operations from a dropdown, reorder with arrows, and run them in sequence. |
+| ⚡ **Instant client‑side processing** | No server round‑trips—the whole pipeline runs in the browser.                   |
+| 🛠️ **Extensible**                   | Add your own transforms by pushing a function to `BUILT_IN_OPS`.                |
+| 🗄️ **Copy‑to‑clipboard**            | One‑click button to copy the final output.                                      |
+| 🎨 **Tailwind + shadcn/ui**          | Production‑ready components with consistent theming.                            |
+
+---
+
+## 🚀 Quick start
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) and you’re ready to experiment.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍💻 Usage
 
-## Learn More
+1. **Paste** or type your input string in the *Input* box.
+2. **Add operations** from the dropdown (e.g., *Un‑escape JSON string*, *Beautify JSON*).
+3. **Reorder** operations with the ▲▼ buttons as needed.
+4. Click **Run** to execute the pipeline—results appear in the *Output* box.
+5. Hit **Copy to clipboard** to grab the final text.
 
-To learn more about Next.js, take a look at the following resources:
+### Sample pipeline
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Input (escaped):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+"{\"id\":123,\"url\":\"https%3A%2F%2Fexample.com%2Fitem%3Fref%3Dchat\"}"
+```
 
-## Deploy on Vercel
+Pipeline: *Un‑escape → Beautify → URL‑decode* → **Output** becomes nicely formatted JSON with a readable URL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗️ Deploying
+
+The app is 100 % client‑side, so Vercel (recommended), Netlify, or any static‑hosting service works:
+
+1. Push to GitHub/GitLab.
+2. Click **“Import Project”** on Vercel.
+3. Accept defaults (no env vars needed).
+
+Done—build & deploy in under a minute.
+
+---
+
+## 📄 License
+
+MIT © 2025 Your Name
